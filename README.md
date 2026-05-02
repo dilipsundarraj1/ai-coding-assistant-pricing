@@ -162,7 +162,166 @@ If you use Claude via the Anthropic API directly (no subscription):
 
 ---
 
-## Part 4: Which Should You Choose?
+## Part 4: Direct Dollar Comparison — Real Developer Scenarios
+
+Three developer types, same month, head-to-head cost.
+
+---
+
+### Persona 1: The Student / Casual Learner
+**Usage:** ~30 min/day, asks questions, gets help with assignments, light code generation
+
+| | GitHub Copilot (after June 1) | Claude Code |
+|---|---|---|
+| **Plan** | Pro — $10/month | Pro — $20/month |
+| **Included credits** | $10 (1,000 AI credits) | Flat subscription |
+| **Estimated token use** | ~100 chat messages × 2,000 tokens = 200K tokens | Same light usage |
+| **Model used** | GPT-5 mini (included, near-zero cost) | Claude Sonnet 4.6 |
+| **Estimated credit spend** | ~$0.50–$1.00 of the $10 budget | N/A — flat rate |
+| **Monthly bill** | **$10** (plenty of headroom) | **$20** |
+| **Verdict** | Copilot wins on price for light use | Overkill for casual use |
+
+> **Dollar difference: Copilot saves you $10/month** for light, casual usage — as long as you stick to included models.
+
+---
+
+### Persona 2: The Working Developer
+**Usage:** 4–6 hours/day coding, daily AI chat, code reviews, refactoring tasks, some agentic sessions
+
+| | GitHub Copilot (after June 1) | Claude Code |
+|---|---|---|
+| **Plan** | Pro+ — $39/month | Pro — $20/month |
+| **Included credits** | $39 (3,900 AI credits) | Flat subscription |
+| **Estimated token use** | 300 chat messages, mix of models, some large file contexts | Heavy daily sessions |
+| **Model used** | Mix: GPT-4.1 (included) + GPT-5.4 for complex tasks | Claude Sonnet 4.6 |
+| **Estimated credit spend** | ~$25–$45 depending on model mix | N/A |
+| **Monthly bill** | **$39–$55** (may exceed credits, triggering overage) | **$20** (may hit rolling window limits) |
+| **Verdict** | Copilot costs more but has model variety | Claude Code cheaper, but may throttle during long sprints |
+
+> **Dollar difference: Claude Code saves $19–$35/month** for this profile — but Copilot gives you inline completions and IDE integration that Claude Code lacks.
+
+---
+
+### Persona 3: The Power User / Full-Time AI Developer
+**Usage:** 8+ hours/day, autonomous agentic tasks, large codebases, multi-file rewrites, running multiple sessions
+
+| | GitHub Copilot (after June 1) | Claude Code |
+|---|---|---|
+| **Plan** | Enterprise — $39/user/month | Max 5x — $100/month |
+| **Included credits** | $39 worth per user (pooled in org) | Flat subscription, 5x usage headroom |
+| **Estimated token use** | 500+ messages + large file contexts + agent runs | Continuous deep coding sessions |
+| **Model used** | GPT-5.4 / Gemini 2.5 Pro (high-cost models) | Claude Opus 4.6 |
+| **Estimated credit spend** | Likely exhausts $39 credits mid-month; overage could add $20–$60+ | N/A |
+| **Monthly bill** | **$59–$100+** (base + overage, unpredictable) | **$100** (fixed, predictable) |
+| **Verdict** | Copilot cost becomes unpredictable at this level | Claude Code is flat and reliable |
+
+> **Dollar difference: roughly the same cost ($100), but Claude Code is predictable while Copilot can surprise you** with overages.
+
+---
+
+### Dollar Summary Table
+
+| Developer Type | Copilot Monthly Bill | Claude Code Monthly Bill | Cheaper Option |
+|----------------|---------------------|--------------------------|----------------|
+| Student / Casual | **$10** | $20 | Copilot saves $10 |
+| Working Developer | **$39–$55** | **$20** | Claude Code saves $19–$35 |
+| Power User | **$59–$100+** | **$100** | Claude Code (predictable) |
+
+---
+
+### The Hidden Cost of Copilot's New Model
+
+Even if the dollar totals look similar, Copilot introduces **billing uncertainty**:
+- A single large agent task with a long-context model can burn $2–$5 in one session
+- Sending a large codebase as context repeatedly eats credits fast
+- Developers have to actively **choose cheaper models** to stay in budget
+
+Claude Code removes that decision entirely — you pay a flat rate and code freely.
+
+---
+
+## Part 5: Spending Controls — How Much Can You Control Your Bill?
+
+---
+
+### GitHub Copilot — Spending Controls (After June 1, 2026)
+
+GitHub has built several controls to help users manage costs under the new token-based model.
+
+#### For Individual Users (Pro / Pro+)
+| Control | How It Works |
+|---------|-------------|
+| **Model selection** | Manually pick a cheaper model (e.g., GPT-5 mini instead of GPT-5.4) to reduce token cost |
+| **Included models** | GPT-4.1 and GPT-5 mini are free — using them means zero credit spend |
+| **Preview bill dashboard** | GitHub is launching a billing preview in May 2026 so you can see projected costs before June 1 |
+| **Overage toggle** | You can choose to block additional usage once credits run out (hard cap at your plan price) |
+
+> **Example:** You're on Pro ($10/month). You go to settings and turn off overage. Now you can never be charged more than $10 — but you'll be cut off when credits run out.
+
+#### For Teams / Organizations (Business / Enterprise)
+| Control | Who Sets It | What It Does |
+|---------|------------|--------------|
+| **Enterprise-level budget** | Admin | Sets a monthly cap for the whole organization |
+| **Cost center budgets** | Admin | Splits budget across teams or departments |
+| **Per-user budgets** | Admin | Limits how much each individual can spend |
+| **Pooled credits** | Automatic | Unused credits from one user can be used by others in the org |
+| **Block overage** | Admin | Stops usage when the pool is empty instead of charging more |
+
+> **Example:** A team of 10 on Business ($19/user = $190/month). Admin sets a $190 hard cap. When the pool is empty mid-month, the team is throttled — no surprise $300 bill.
+
+---
+
+### Claude Code — Spending Controls
+
+Claude Code's model is fundamentally different: **the subscription IS the cap**.
+
+#### For Subscription Users (Pro / Max)
+| Control | How It Works |
+|---------|-------------|
+| **Tier selection** | You choose Pro ($20), Max 5x ($100), or Max 20x ($200) upfront |
+| **No overage** | When your rolling window is exhausted, Claude Code pauses — it does NOT charge you more |
+| **Hard ceiling = your plan price** | Impossible to spend more than your tier. Period. |
+| **Upgrade on demand** | If you keep hitting limits, you upgrade to the next tier — a conscious, deliberate choice |
+
+> **Example:** You're on Pro ($20/month). You code intensively for 3 hours and hit the rolling window limit. Claude Code pauses for ~1 hour. You are never charged a cent more than $20.
+
+#### For API Users (Pay-as-you-go)
+| Control | How It Works |
+|---------|-------------|
+| **Anthropic Console spending limits** | Set a hard monthly dollar cap in the API console |
+| **Model selection** | Use Sonnet 4.6 ($3/MTok input) instead of Opus 4.6 (higher) for cheaper runs |
+| **Prompt caching** | Cache repeated context (like large codebases) to reduce input token costs significantly |
+| **Per-key limits** | Set spend limits on individual API keys for teams |
+
+> **Example:** You set a $50/month hard cap on your API key. Once you hit $50, all API calls are rejected until the next billing cycle. You're in full control.
+
+---
+
+### Spending Control Comparison
+
+| | GitHub Copilot (after June 1) | Claude Code Subscription | Claude Code API |
+|---|---|---|---|
+| **Can you set a hard spending cap?** | Yes (toggle overage off) | Built-in — no overage possible | Yes (console limit) |
+| **Risk of surprise charges** | Low if you disable overage; higher if left on | None | None if cap is set |
+| **Granularity of control** | Enterprise/team/user level budgets | Choose your tier | Per API key |
+| **What happens when limit is hit** | Usage stops (if overage blocked) | Throttled for ~1 hour, then resumes | API calls rejected |
+| **Cheapest possible bill** | $0 (Free plan) or $10 (Pro, use included models only) | $20 (Pro plan minimum) | Pay only what you use |
+| **Most predictable bill** | Copilot with overage disabled | Any Claude Code tier | With a hard cap set |
+
+---
+
+### Key Takeaway on Control
+
+- **GitHub Copilot** gives you more dials to turn — but you have to actively manage them. If you forget to disable overage or pick an expensive model, your bill grows.
+- **Claude Code subscriptions** remove the decision entirely. The price you signed up for is the max you'll ever pay that month.
+- **Claude Code API** gives the most granular control — ideal for teams that want exact budget enforcement, but requires setup in the Anthropic Console.
+
+> **Rule of thumb for students:** If you want zero billing surprises, Claude Code's subscription tiers are the safest choice. If you want the lowest possible floor with flexibility, Copilot Pro on included models (or the free tier) can cost as little as $0–$10/month — but requires you to stay disciplined about model choice.
+
+---
+
+## Part 6: Which Should You Choose?
+
 
 ### Choose GitHub Copilot if you...
 - Want **inline code completions** as you type
