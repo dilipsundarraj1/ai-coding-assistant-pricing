@@ -40,6 +40,12 @@
 
 # AI Coding Assistant Pricing Comparison
 
+> **Pricing changes constantly.**
+> All AI coding assistant companies — GitHub (Copilot), Anthropic (Claude Code), OpenAI, Google, and others — regularly update their pricing tiers, model availability, and billing structures. The figures in this document are a snapshot in time. Before making any purchasing decisions, always verify current pricing directly on the official documentation pages.
+
+> **The pricing model you see today may become the industry standard.**
+> GitHub Copilot's shift to token-based billing with model multipliers, credit allowances, and overage controls is not just a Copilot change — it is likely a preview of how the entire industry will evolve. As AI usage grows, other companies (Anthropic, Google, xAI, and new entrants) may adopt similar concepts: pay-per-token models, tiered credit bundles, and per-model pricing. Understanding how Copilot's structure works today gives you a head start on navigating whatever pricing model comes next.
+
 ---
 
 ## Why This Matters
@@ -414,4 +420,4 @@ Consider it **in addition to** Copilot only if:
 
 ---
 
-*Sources verified as of May 2026. Prices subject to change.*
+*Sources verified as of May 2026. AI coding assistant pricing evolves rapidly — tiers, models, and rates can change at any time. Always check official documentation before making decisions.*
